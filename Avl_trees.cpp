@@ -9,6 +9,9 @@ class Node
     Node *right;  
     int height; 
 };
+
+
+
 int height(Node *N)  
 {  
     if (N == NULL)  
@@ -16,11 +19,15 @@ int height(Node *N)
     return N->height;  
 
 }  
-  int max(int a, int b)  
+  
+
+int max(int a, int b)  
 {  
     return (a > b)? a : b;  
 }  
-  Node* newNode(int key)  
+  
+
+Node* newNode(int key)  
 {  
     Node* node = new Node(); 
     node->key = key;  
@@ -31,6 +38,8 @@ int height(Node *N)
     return(node);  
 }  
   
+
+
 Node *rightRotate(Node *y)  
 {  
     Node *x = y->left;  
@@ -44,6 +53,8 @@ Node *rightRotate(Node *y)
     return x;  
 }  
     
+
+
 Node *leftRotate(Node *x)  
 {  
     Node *y = x->right;  
@@ -56,13 +67,19 @@ Node *leftRotate(Node *x)
   
     return y;  
 }  
-  int getBalance(Node *N)  
-{  
+  
+
+
+ int getBalance(Node *N)  
+ {  
     if (N == NULL)  
         return 0;  
     return height(N->left) - height(N->right);  
 }  
-  Node* insert(Node* node, int key)  
+  
+
+
+Node* insert(Node* node, int key)  
 {  
     if (node == NULL)  
         return(newNode(key));  
@@ -107,6 +124,8 @@ Node * minValueNode(Node* node)
   
     return current;  
 }  
+
+
 
 Node* deleteNode(Node* root, int key)  
 {    
@@ -159,6 +178,8 @@ Node* deleteNode(Node* root, int key)
     return root;  
 } 
 
+
+
 void preorder(Node *root)  
 {  
     if(root != NULL)  
@@ -168,7 +189,10 @@ void preorder(Node *root)
         preorder(root->right);  
     }  
 }  
-    int main()
+    
+
+
+     int main()
      {
 	Node av;
 	Node *root=NULL;
